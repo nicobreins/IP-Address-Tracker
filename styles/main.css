@@ -1,0 +1,157 @@
+body {
+  --Very-Dark-Gray: hsl(0, 0%, 17%);
+  --Dark-Gray: hsl(0, 0%, 59%);
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  font-size: 12px;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+body * {
+  margin: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+header {
+  background-image: url(../images/pattern-bg.png);
+  background-position: center;
+  padding: 1.5rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 40vh;
+  position: relative;
+}
+header h1 {
+  color: #fff;
+  font-weight: 500;
+  padding: 1em;
+}
+header .header-inner {
+  position: absolute;
+  left: 1.5rem;
+  right: 1.5rem;
+  top: 0;
+  z-index: 8;
+}
+header .input-wrapper {
+  position: relative;
+}
+@media (min-width: 768px) {
+  header .input-wrapper {
+    margin: auto;
+    width: 40vw;
+  }
+}
+header #ip-input {
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  text-align: left;
+  font-weight: 400;
+  color: var(--Very-Dark-Gray);
+}
+@media (min-width: 768px) {
+  header #ip-input {
+    font-size: 1.2rem;
+  }
+}
+header #ip-submit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #000;
+  border: none;
+  border-radius: 0rem 1rem 1rem 0rem;
+  padding: 0rem 1.7rem;
+  cursor: pointer;
+}
+header #ip-submit:hover {
+  background-color: var(--Very-Dark-Gray);
+}
+header .ip-info {
+  padding: 2rem 1rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  margin-top: 1.5rem;
+  box-shadow: 10px 20px 40px 5px rgba(0, 0, 0, 0.08);
+}
+@media (min-width: 768px) {
+  header .ip-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 2rem;
+    min-height: 20vh;
+    width: 80vw;
+    margin: auto;
+    margin-top: 3rem;
+  }
+  header .ip-info * {
+    text-align: left;
+    flex-basis: 100%;
+  }
+}
+@media (min-width: 768px) {
+  header .ip-info .ip-info__card {
+    flex-grow: 1;
+  }
+}
+header .ip-info .ip-info__card + .ip-info__card {
+  padding-top: 1.5rem;
+}
+@media (min-width: 768px) {
+  header .ip-info .ip-info__card + .ip-info__card {
+    padding-top: 0;
+    padding-left: 2rem;
+    border-left: 1px solid var(--Dark-Gray);
+  }
+}
+header .ip-info h2 {
+  color: var(--Dark-Gray);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+}
+@media (min-width: 768px) {
+  header .ip-info h2 {
+    font-size: 0.8rem;
+  }
+}
+header .ip-info p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding-top: 0.4em;
+  color: var(--Very-Dark-Gray);
+}
+@media (min-width: 768px) {
+  header .ip-info p {
+    font-size: 1.6rem;
+  }
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.loader img {
+  width: 50px;
+  height: auto;
+}
+
+.map {
+  height: 60vh;
+  position: relative;
+  z-index: 7;
+}/*# sourceMappingURL=main.css.map */

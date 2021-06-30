@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css">
+
+  <!-- leafmap -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>   
+
+  <title>IP Address Tracker</title>
+
+</head>
+<body>
+  <header>
+
+    <div class="header-inner">
+      <h1>IP Address Tracker</h1>
+
+      <div class="input-wrapper">
+        <form onsubmit="return finalRenderLogic()">
+        <input type="text" id="ip-input" autocomplete="off" placeholder="Search for an IP address or domain...">
+        <button id="ip-submit"> <img src="images/icon-arrow.svg" alt="" > </button>
+      </form>
+      </div>
+      
+      <div class="ip-info">
+        <div class="ip-info__card">
+          <h2>IP ADDRESS</h2>
+          <p id="ip-add">----</p>        
+        </div>
+        
+  
+        <div class="ip-info__card">
+          <h2>LOCATION</h2>
+          <p id="ip-location">----</p>        
+        </div>
+      
+  
+        <div class="ip-info__card">
+          <h2>TIMEZONE</h2>
+          <p id="ip-timezone">----</p>        
+        </div>
+       
+  
+        <div class="ip-info__card">
+          <h2>ISP</h2>
+          <p id="ip-isp">----</p>        
+        </div>
+       
+      </div>
+    </div>
+    
+
+  </header>
+  <div class="map" id="ip-map">
+
+  </div>
+
+  <div  class="loader" id="loader">
+    <img src="images/loading-icon-transparent-background-12.gif" alt="">
+  </div>
+
+  <script src="main.js"></script>
+
+  <script>
+
+
+  </script>
+</body>
+</html>
