@@ -93,12 +93,12 @@ const renderMap = (res) => {
 
 }
 
-
 const finalRenderLogic = () => {
+
     const ipInputVal = ipInput.value;
     const endpointIp  = url + queryParamIp + ipInputVal;
-    const endpointDomain  = url + queryParamDomain + ipInputVal;
-
+    const endpointDomain  = url + queryParamDomain + ipInputVal;    
+    
     if(ipRegx.test(ipInputVal.value) || ipInputVal.value === ''){
         getInfo(endpointIp);
     } else {
@@ -109,6 +109,8 @@ const finalRenderLogic = () => {
 
     return false
 }
+
+finalRenderLogic()
 
 // const submitBtn = document.getElementById('ip-submit');
 // submitBtn.onclick = finalRenderLogic;
